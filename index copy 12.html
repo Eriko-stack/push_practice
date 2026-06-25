@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>Hello!</title>
+        <link rel="stylesheet" href="./styles.css">
+    </head>
+    <body>
+        <h1>Hello!</h1>
+        <div class="container">
+        <p>
+            <script>
+                let arr={ '国語':98, '数学':76, '英語':54, '理科':78, '社会':90 };
+                let total = 0;
+                for (let key in arr) {
+                    total += arr[key];//☆total = total + arr[key];
+                    document.write(key+':'+arr[key]+'<br>');
+                }
+                document.write('<p>合計は、'+total+'、平均は、'+total/5+'です。</p>');
+            </script>
+        </p>
+        </div>
+    </body>
+</html>

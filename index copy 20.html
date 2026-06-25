@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>Hello!</title>
+        <link rel="stylesheet" href="./styles.css">
+    </head>
+    <body>
+        <h1>Hello!</h1>
+        <div class="container">
+        <p id="msg" class="h3 p-2">RGBを指定</p>
+        <label for="R">R</label>
+        <input type="range" id="R" min="0" max="255"
+        class="form-control-range" oninput="action()">
+        <label for="G">G</label>
+        <input type="range" id="G" min="0" max="255"
+        class="form-control-range" oninput="action()">
+        <label for="B">B</label>
+        <input type="range" id="B" min="0" max="255"
+        class="form-control-range" oninput="action()">
+        <script>
+        function action(){
+            let R= +document.querySelector('#R').value;
+            let G= +document.querySelector('#G').value;
+            let B= +document.querySelector('#B').value;    
+            let msg= document.querySelector('#msg');
+            let color= R + ',' + G + ',' + B;
+            msg.style.backgroundColor = 'rgb(' + color + ')';
+            let val = R + G + B;
+            if (val > 370){
+                msg.style.color ='black';
+            }else{
+                msg.style.color ='white';
+            }
+            msg.textContent = '[ ' + color + ' ]';  
+        }
+        action();
+        </script>
+
+        </div>
+    </body>
+</html>

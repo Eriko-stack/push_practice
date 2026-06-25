@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>Hello!</title>
+        <link rel="stylesheet" href="./styles.css">
+    </head>
+    <body>
+        <h1>Hello!</h1>
+        <div class="container">
+        <p>
+            <script>
+                function calc(n) {
+                    let total = 0;
+                    for (let i = 1; i <= n; i++) {
+                        total += i;//☆total=total+i;
+                    }
+                    return total;
+                }
+                const num = 100;//☆
+
+                document.write(num+'までの合計は、'+calc(num)+'です。');
+            </script>
+        </p>
+        </div>
+    </body>
+</html>

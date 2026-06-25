@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>Hello!</title>
+        <link rel="stylesheet" href="./styles.css">
+    </head>
+    <body>
+        <h1>Hello!</h1>
+        <div class="container">
+        <p>
+            <script>
+            let N=1103;//☆
+            let num=2;
+            let result=true;
+            while(num<N){
+                if(N%num==0){
+                    result=false;
+                    break;
+                }
+                num++;
+            }
+            if(result){    
+             document.write(N+"は、素数です。");
+            }else{
+             document.write(N+"は、素数ではありません。");
+            }
+            
+            </script>
+        </p>
+        </div>
+    </body>
+</html>

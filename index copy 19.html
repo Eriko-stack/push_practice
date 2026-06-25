@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>Hello!</title>
+        <link rel="stylesheet" href="./styles.css">
+    </head>
+    <body>
+        <h1>Hello!</h1>
+        <div class="container">
+        <p id="msg">Set size & family.</p>
+        <label for="f1">Size</label>
+        <input type="range" id="f1" min="10" max="100"
+        class="form-control-range">
+        <label for="f2">Font Family</label>
+        <select id="f2" class="form-control">
+            <option>Serif</option>
+            <option>Sans-Serif</option>
+            <option>Monospace</option>
+        </select>
+        <button onclick="action(event)" class="btn btn-primary">
+            Click!
+        </button>
+        <script>
+        function action(event){
+            let f1 = document.querySelector('#f1');
+            let f2 = document.querySelector('#f2');
+            let msg = document.querySelector('#msg');
+            msg.style.fontFamily = f2.value;
+            msg.style.fontSize = f1.value + 'px';
+            let result = f2.value + '(' + f1.value + 'px)';
+            msg.innerHTML = result;
+        }
+            </script>
+
+        </div>
+    </body>
+</html>

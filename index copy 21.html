@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>Hello!</title>
+        <link rel="stylesheet" href="./styles.css">
+    </head>
+    <body>
+        <h1>Hello!</h1>
+        <div class="container">
+        <p id="msg">Select style-class!</p>
+        <label for="f2">class</label>
+        <select id="list" class="form control"
+        onclick="action()">
+        <option>none</option>
+        <option>alert</option>
+        <option>card</option>
+        </select>
+        <script>
+            function action(){
+                let list = document.querySelector('#list');
+                let msg = document.querySelector('#msg');
+                msg.className = '';
+                msg.classList.add(list.value);
+                msg.textContent ='スタイルクラスは "' + list.value +
+                '" に含まれています。'
+            }
+            action();
+        </script>
+  
+        </div>
+    </body>
+</html>
